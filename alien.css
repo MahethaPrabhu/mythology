@@ -1,0 +1,219 @@
+
+
+html, body { background: #333 url("https://codepen.io/images/classy_fabric.png"); }
+
+ul, li { display: block; }
+
+#body {
+    left: 50%;
+    width: 609px;
+    height: 405px;
+    display: block;
+    position: absolute;
+    margin-left: -320px;
+    margin-top: 20px;
+}
+
+#body * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+
+
+.center {
+  left: 50%;
+  position: absolute;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.sidenav {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-image:url("https://images.unsplash.com/photo-1596727147705-61a532a659bd?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fGFsaWVufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"); 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #6db6e6;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+.navbar{
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 50px;
+}
+
+#button{
+    padding: 30px;
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(19, 18, 18);
+    border-style: dashed;
+    border-color: azure;
+    
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+div.pullRightLeft a:before, div.pullRightLeft a:after
+{
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0px;
+  content: '';
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+
+div.pullRightLeft a:before
+{
+  left: 0px;
+} 
+
+div.pullRightLeft a:after
+{
+  right: 0px;
+}
+
+div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
+{
+  width: 100%;
+}
+
+  
+#astronaut1{
+    position: absolute;
+    top: 25%;
+    left:  1%;
+    height: 500px;
+    animation: floating 5s infinite ease-in;
+}
+
+#astronaut2{
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    height: 425px;
+    animation: floating 5s infinite ease-in;
+}
+
+@keyframes floating{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(30px); 
+    }
+}
+
+#body input { display: none; }
+
+
+
+#img-inner {
+    top: 0;
+    opacity: 0;
+    width: 609px;
+    height: 405px;
+    display: block;
+    position: absolute;
+    
+    transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+    
+    transition: all .7s ease-in-out;
+    -moz-transition: all .7s ease-in-out;
+    -webkit-transition: all .7s ease-in-out;
+}
+
+#img-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+ 
+
+#img-inner:hover ~ label.sb-bignav { opacity: 0.5; }
+
+label.sb-bignav:hover { opacity: 1; }
+
+
+.sb-bignav {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+    
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    
+    transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -webkit-transition: opacity .2s;
+	
+    color: white;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+label[title="Next"] { right: 0; }
+
+input:checked + li > #img-inner {
+    opacity: 1;
+        
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+
+input:checked + li > label { display: block; }
+
+

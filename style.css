@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+body {
+    background-image: url("./assets/Alien\ \(15\).png");
+    display: flex;
+  align-items: flex-start;
+  background-size: 100% 100%;
+  Width:100vw;
+  height: 100vh;
+  background-repeat:no-repeat;
+  font-family: 'Langar', cursive;
+}
+
+.horror-text {
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-name: flickering;
+    animation-timing-function: step-start;
+    color: #912914;
+    
+    font-size: 96px;
+  }
+  
+  @keyframes flickering {
+    0% {
+      color: #7a7fca;
+      text-shadow: none;
+      transform: skewX(0);
+    }
+    5% {
+      color:  #7a7fca;
+      text-shadow: none;
+      transform: skewX(0);
+    }
+    10% {
+      color:  #7a7fca;
+      text-shadow: 1px 1px #eee;
+      transform: skewX(-15deg);
+    }
+    15% {
+      color: #ccc;
+      text-shadow: none;
+      transform: skewX(-15deg);
+    }
+    20% {
+      color:  #7a7fca;
+      text-shadow: none;
+      transform: skewX(0);
+    }
+    25% {
+      color: #ccc;
+      text-shadow: 2px 2px   #7a7fca;
+      transform: skewX(0);
+    }
+    30% {
+      color: #ccc;
+      text-shadow: 2px 2px   #7a7fca;
+      transform: skewX(0);
+    }
+    35% {
+      color: #ccc;
+      text-shadow: 2px 2px   #7a7fca;
+      transform: skewX(0);
+    }
+    37% {
+      color: #ccc;
+      text-shadow: 1px 1px #eee;
+      transform: skewX(0);
+    }
+    40% {
+      color:   #7a7fca;
+      text-shadow: 1px 1px #eee;
+      transform: skewX(0);
+    }
+    45% {
+      color: #7a7fca;
+      text-shadow: 1px 1px #eee;
+      transform: skewX(0);
+    }
+    50% {
+      color:  #7a7fca;
+      text-shadow: none;
+      transform: skewX(0);
+    }
+    55% {
+      color:  #7a7fca;
+      text-shadow: none;
+      transform: skewX(0);
+    }
+    60% {
+      color: #7a7fca;
+      text-shadow: none;
+      transform: skewX(0);
+    }
+    65% {
+      color:  #7a7fca;
+      text-shadow: none;
+      transform: skewX(0);
+    }
+    68% {
+      color: #7a7fca;
+      text-shadow: 1px 1px #eee;
+      transform: skewX(0);
+    }
+    70% {
+      color:  #7a7fca;
+      text-shadow: 1px 1px #eee;
+      transform: skewX(0);
+    }
+    75% {
+      color: #7a7fca;
+      text-shadow: 1px 1px #eee;
+      transform: skewX(10deg);
+    }
+    80% {
+      color: #7a7fca;
+      text-shadow: 1px 1px #eee;
+      transform: skewX(10deg);
+    }
+    85% {
+      color:  #7a7fca;
+      text-shadow: 1px 1px #eee;
+      transform: skewX(10deg);
+    }
+    90% {
+      color: #7a7fca;
+      text-shadow: none;
+      transform: skewX(0);
+    }
+    95% {
+      color: #7a7fca;
+      text-shadow: 1px 1px #eee;
+      transform: skewX(0);
+    }
+    100% {
+      color: #7a7fca;
+      text-shadow: none;
+      transform: skewX(0);
+    }
+  }
+  
+  .center {
+    left: 50%;
+    position: absolute;
+    top: 20%;
+    transform: translate(-50%, -50%);
+  }
+
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-image:url("https://images.unsplash.com/photo-1596727147705-61a532a659bd?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fGFsaWVufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"); 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #6db6e6;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+
+  .navbar{
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 50px;
+  }
+
+  #button{
+      padding: 30px;
+      border-radius: 100px;
+      width: 20px;
+      height: 20px;
+      background-color: rgb(19, 18, 18);
+      border-style: dashed;
+      border-color: azure;
+      
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  div.pullRightLeft a:before, div.pullRightLeft a:after
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullRightLeft a:before
+{
+    left: 0px;
+} 
+
+div.pullRightLeft a:after
+{
+    right: 0px;
+}
+
+div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
+{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+  section.container{
+    min-width: 500px;
+    margin: 10% auto;
+    text-align: center;
+    text-decoration-color: rgb(248, 248, 248);
+  }
+
+    button:hover{cursor: pointer}
+    button {
+      background: transparent; outline: none;
+      position: relative;
+      border: 5px solid rgb(250, 247, 247);
+      padding: 15px 50px;
+      overflow: hidden;
+    }
+
+    /*button:before (attr data-hover)*/
+    button:hover:before{opacity: 1; transform: translate(0,0);}
+    button:before{
+      background-color: white;
+      content: attr(data-hover);
+      position: absolute;
+      top: 1.1em; left: 0;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 800;
+      font-size: .8em;
+      opacity: 0;
+      transform: translate(-100%,0);
+      transition: all .3s ease-in-out;
+    }
+      /*button div (button text before hover)*/
+      button:hover div{opacity: 0; transform: translate(100%,0)}
+      button div{
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 800;
+        font-size: .8em;
+        transition: all .3s ease-in-out;
+      }
+
+      .about-aliens{
+        color: white;
+      }
+
+      .none{
+        margin-top: 450px;
+        margin-right: 150px;
+       }
+
+       .para{
+         color: white;
+         font-size: 30px;
+         margin-top: 1px;
+       }
